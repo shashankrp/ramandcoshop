@@ -64,10 +64,13 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Developed by Shashank R P */}
         {/* Legal Bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-10">
           <span className="text-[8px] uppercase tracking-[0.5em] text-brand-cream/20 font-black">
-            © {new Date().getFullYear()} Rama & Co Group. All Intellectual Property Reserved.
+            © {new Date().getFullYear()} Raman & Co. · <a href="https://shashankrp.in" target="_blank" style={{textDecoration: 'underline', textBold: true}} rel="noopener noreferrer" className="hover:text-brand-gold transition-colors">
+              Built by Shashank R P
+            </a>
           </span>
           <div className="flex items-center gap-6 text-[8px] uppercase tracking-[0.4em] text-brand-cream/20 font-black italic">
              <div className="flex items-center gap-2">
