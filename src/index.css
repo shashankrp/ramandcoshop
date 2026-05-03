@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #0f172a; /* Sophisticated Midnight Navy */
+  --color-brand-cream: #ffffff;
+  --color-brand-gold: #c29d59; /* Refined Gold */
+  --color-brand-gold-light: #d4af37;
+  --color-brand-muted: #f8fafc; /* Lighter slate for backgrounds */
+  
+  --font-serif: "Playfair Display", "EB Garamond", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply bg-white text-brand-green selection:bg-brand-gold/30 overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif font-medium;
+  }
+  
+  body {
+    @apply font-sans font-normal text-brand-green/90 leading-relaxed;
+  }
+}
+
+.ornamental-line {
+  @apply h-[1px] bg-brand-green/10 relative flex justify-center items-center;
+}
+
+.ornamental-line::after {
+  content: "✧";
+  @apply absolute bg-brand-cream px-6 text-brand-gold text-[10px] tracking-widest;
+}
+
+.glass-nav {
+  @apply bg-brand-cream/90 backdrop-blur-xl border-b border-brand-green/5;
+}
+
+.diligent-shadow {
+  shadow-offset: 0 10px;
+  shadow-blur: 30px;
+  shadow-color: rgba(10, 46, 31, 0.05);
+}
